@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-/* const Persona = require('./models/Persona.js');
- */
+const Persona = require('./models/Persona.js');
 const app = express();
 
 const router = express.Router();
