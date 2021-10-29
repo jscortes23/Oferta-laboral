@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+/* Creacion de modelo de persona */
 let PersonaSchema = new mongoose.Schema({
     typeDoc: String,
     documentID: Int32Array,
