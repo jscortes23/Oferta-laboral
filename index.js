@@ -11,7 +11,7 @@ mongoose.connect("mongodb+srv://joan:cali199911@clusterprogweb.qka5w.mongodb.net
 
 /* Creacion del CRUD */
 
-/* Crear Persona en base de adtos MongoDB */
+/* Crear persona base de datos*/
 router.post('/personas', (res, req) => {
     let nuevaPersona = new Persona({
         typeDoc: req.body.typeDoc,
