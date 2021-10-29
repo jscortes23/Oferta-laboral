@@ -14,4 +14,5 @@ let PersonaSchema = new mongoose.Schema({
     description: String
 })
 
+/* Para  usar fuera del modulo */
 module.exports = mongoose.model('persona',PersonaSchema, 'Personas')
