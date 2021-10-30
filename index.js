@@ -12,7 +12,7 @@ mongoose.connect("mongodb+srv://joan:cali199911@clusterprogweb.qka5w.mongodb.net
 /* Creacion del CRUD */
 
 /* Crear persona base de datos*/
-router.post('/personas', (res, req) => {
+router.post('/personas', (req, res) => {
     let nuevaPersona = new Persona({
         typeDoc: req.body.typeDoc,
         documentID: req.body.documentID,
@@ -34,7 +34,7 @@ router.post('/personas', (res, req) => {
 })
 
 /* Leer Base de datos*/
-router.get('/personas', (res, req) => {
+router.get('/personas', (req, res) => {
     Persona.find(function (err, datos) {
         if (err) {
             console.log("Error al leer la perosna")
@@ -44,6 +44,7 @@ router.get('/personas', (res, req) => {
     })
 })
 
+app.use(router);
 
 app.listen(3003, () => {
     console.log("Servidor funciona");

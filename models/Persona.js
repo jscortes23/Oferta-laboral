@@ -3,13 +3,13 @@ const mongoose = require('mongoose')
 /* Creacion de modelo de persona */
 let PersonaSchema = new mongoose.Schema({
     typeDoc: String,
-    documentID: Int32Array,
+    documentID: Number,
     name: String,
     lastName: String,
     address: String,
     email: String,
-    landline: Int16Array,
-    phone: Int32Array,
+    landline: Number,
+    phone: Number,
     webSite: String,
     description: String
 })
