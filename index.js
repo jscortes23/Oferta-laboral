@@ -44,6 +44,28 @@ router.get('/personas', (req, res) => {
     })
 })
 
+/* Actualizar la persona en la base de datos */
+/* router.put('/personas/:id', (req, res) => {
+    Persona.findByIdAndUpdate(req.params.id, function (err, datos) {
+        Persona.typeDoc = req.body.typeDoc,
+        Persona.documentID = req.body.documentID,
+        Persona.name = req.body.name,
+        Persona.lastName = req.body.lastName,
+        Persona.address = req.body.address,
+        Persona.email = req.body.email,
+        Persona.landline = req.body.landline,
+        Persona.phone = req.body.phone,
+        Persona.webSite = req.body.webSite,
+        Persona.description = req.body.description
+    })
+}) */
+
+/* Borrar persona de base datos */
+/* router.delete('/personas/:id', (req, res) => {
+    const borrar = Persona.findByIdAndDelete({_id: req.params.id})
+    res.send("Se borro exitosamente")
+}) */
+
 app.use(router);
 
 app.listen(3003, () => {
