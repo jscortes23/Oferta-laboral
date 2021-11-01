@@ -44,7 +44,7 @@ router.get('/personas', (req, res) => {
     })
 })
 
-/* Actualizar la persona en la base de datos */
+/* Modificar la persona en la base de datos */
 /* router.put('/personas/:id', (req, res) => {
     Persona.findByIdAndUpdate(req.params.id, function (err, datos) {
         Persona.typeDoc = req.body.typeDoc,
