@@ -65,7 +65,7 @@ router.delete('/personas/:id', (req, res) => {
     const borrar = Persona.findByIdAndDelete({_id: req.params.id})
     res.send("Se borro exitosamente")
 })
-
+ /* master master */
 app.use(router);
 
 app.listen(3003, () => {
