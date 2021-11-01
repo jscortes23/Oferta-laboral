@@ -45,27 +45,33 @@ router.get('/personas', (req, res) => {
 })
 
 /* Modificar la persona en la base de datos */
-router.put('/personas/:id', (req, res) => {
-    Persona.findByIdAndUpdate(req.params.id, function (err, datos) {
-        Persona.typeDoc = req.body.typeDoc,
-        Persona.documentID = req.body.documentID,
-        Persona.firtName = req.body.name,
-        Persona.lastName = req.body.lastName,
-        Persona.address = req.body.address,
-        Persona.email = req.body.email,
-        Persona.landline = req.body.landline,
-        Persona.phone = req.body.phone,
-        Persona.webSite = req.body.webSite,
-        Persona.description = req.body.description
+router.put('/personas/:documentID', (req, res) => {
+    const doc = req.params.documentID
+    Persona.updateOne({ documentID: doc }, function (err, datos) {
+            typeDoc = req.body.typeDoc,
+            firtName = req.body.name,
+            lastName = req.body.lastName,
+            address = req.body.address,
+            email = req.body.email,
+            landline = req.body.landline,
+            phone = req.body.phone,
+            webSite = req.body.webSite,
+            description = req.body.description
     })
 })
 
 /* Borrar persona de base datos */
-router.delete('/personas/:id', (req, res) => {
-    const borrar = Persona.findByIdAndDelete({_id: req.params.id})
-    res.send("Se borro exitosamente")
+router.delete('/personas', (req, res) => {
+    const doc = req.body.doc
+    Persona.deleteOne({ documentID: doc }, function (err, dato) {
+        if (err) {
+            res.send("No se pudo borrar persona")
+        } else {
+            res.send("Se borro exitosamente")
+        }
+    })
 })
- /* master master */
+/* master master */
 app.use(router);
 
 app.listen(3003, () => {
