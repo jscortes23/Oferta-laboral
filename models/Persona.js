@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 let PersonaSchema = new mongoose.Schema({
     typeDoc: String,
     documentID: Number,
-    name: String,
+    firtName: String,
     lastName: String,
     address: String,
     email: String,

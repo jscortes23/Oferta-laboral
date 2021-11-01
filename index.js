@@ -49,7 +49,7 @@ router.put('/personas/:id', (req, res) => {
     Persona.findByIdAndUpdate(req.params.id, function (err, datos) {
         Persona.typeDoc = req.body.typeDoc,
         Persona.documentID = req.body.documentID,
-        Persona.name = req.body.name,
+        Persona.firtName = req.body.name,
         Persona.lastName = req.body.lastName,
         Persona.address = req.body.address,
         Persona.email = req.body.email,
