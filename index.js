@@ -16,7 +16,7 @@ router.post('/personas', (req, res) => {
     let nuevaPersona = new Persona({
         typeDoc: req.body.typeDoc,
         documentID: req.body.documentID,
-        name: req.body.name,
+        firtName: req.body.name,
         lastName: req.body.lastName,
         address: req.body.address,
         email: req.body.email,
