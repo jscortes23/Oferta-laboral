@@ -61,10 +61,10 @@ router.get('/personas', (req, res) => {
 }) */
 
 /* Borrar persona de base datos */
-/* router.delete('/personas/:id', (req, res) => {
+router.delete('/personas/:id', (req, res) => {
     const borrar = Persona.findByIdAndDelete({_id: req.params.id})
     res.send("Se borro exitosamente")
-}) */
+})
 
 app.use(router);
 
