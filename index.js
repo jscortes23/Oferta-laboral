@@ -45,7 +45,7 @@ router.get('/personas', (req, res) => {
 })
 
 /* Modificar la persona en la base de datos */
-/* router.put('/personas/:id', (req, res) => {
+router.put('/personas/:id', (req, res) => {
     Persona.findByIdAndUpdate(req.params.id, function (err, datos) {
         Persona.typeDoc = req.body.typeDoc,
         Persona.documentID = req.body.documentID,
@@ -58,7 +58,7 @@ router.get('/personas', (req, res) => {
         Persona.webSite = req.body.webSite,
         Persona.description = req.body.description
     })
-}) */
+})
 
 /* Borrar persona de base datos */
 router.delete('/personas/:id', (req, res) => {
